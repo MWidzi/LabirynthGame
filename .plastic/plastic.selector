@@ -1,0 +1,4 @@
+repository "LabirynthGame@MikrofalaCorp@cloud"
+  path "/"
+    br "/main"
+    co "/main"
