@@ -183,7 +183,6 @@ GameObject:
   - component: {fileID: 680083706}
   - component: {fileID: 680083705}
   - component: {fileID: 680083704}
-  - component: {fileID: 680083703}
   - component: {fileID: 680083708}
   m_Layer: 0
   m_Name: Crystal
@@ -192,18 +191,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &680083703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680083702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34443e2490fabc9428b21265f1b133f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &680083704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -399,6 +386,7 @@ GameObject:
   - component: {fileID: 845177408}
   - component: {fileID: 845177407}
   - component: {fileID: 845177406}
+  - component: {fileID: 845177411}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Pickup
@@ -495,6 +483,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &845177411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845177405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e88ba1cd9227da49bd9ec40ecc6bada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddTime: 0
+  time: 5
 --- !u!1 &1306530388
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +618,6 @@ GameObject:
   - component: {fileID: 2027151725}
   - component: {fileID: 2027151724}
   - component: {fileID: 2027151723}
-  - component: {fileID: 2027151727}
   - component: {fileID: 2027151722}
   m_Layer: 0
   m_Name: Freeze
@@ -713,19 +714,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2027151727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027151721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0493d9bef1458df4186d5d9ff6ad56d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FreezeTime: 10
 --- !u!1001 &3416767619997940891
 PrefabInstance:
   m_ObjectHideFlags: 0
