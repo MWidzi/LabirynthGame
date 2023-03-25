@@ -14,6 +14,31 @@ public class GameManager : MonoBehaviour
 
     bool Win = false;
 
+    public int RedKey = 0;
+    public int GreenKey = 0;
+    public int GoldKey = 0;
+
+    public int Points = 0;
+
+
+    public void AddPoints(int p)
+    {
+        Debug.Log("AddPoints");
+        Points += p;
+    }
+
+    public void AddTime(int t)
+    {
+        timeToEnd += t;
+    }
+
+    public void FreezeTime(int f)
+    {
+        Debug.Log("Freeze");
+        CancelInvoke("Stoper");
+        InvokeRepeating("Stoper", f, 1);
+    }
+
     private void Start()
     {
         if(gameManager = null)
