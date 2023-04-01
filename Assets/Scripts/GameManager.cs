@@ -39,9 +39,26 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("Stoper", f, 1);
     }
 
+    public void AddKey(KeyColor color)
+    {
+        if (color == KeyColor.Red) RedKey++;
+        if (color == KeyColor.Green) GreenKey++;
+        if (color == KeyColor.Gold) GoldKey++;
+    }
+
+    public void PickedUpCheck()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("Aktualny czas:" + timeToEnd);
+            Debug.Log("Red: " + RedKey + "Green: " + GreenKey + "Gold: " + GoldKey);
+            Debug.Log("Punkty: " + Points);
+        }
+    }
+
     private void Start()
     {
-        if(gameManager = null)
+        if(gameManager == null)
         {
             gameManager = this;
         }
@@ -54,6 +71,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         PauseCheck();
+        PickedUpCheck();
     }
 
     void Stoper()
