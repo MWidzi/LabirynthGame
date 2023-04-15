@@ -24,4 +24,29 @@ public class PortalTeleport : MonoBehaviour
         }
     }
 
+    public void FixedUpdate()
+    {
+        Teleport();
+    }
+
+    public void Teleport()
+    {
+        if(PlayerIsOverlapping)
+        {
+            Vector3 portalToPlayer = Player.position - transform.position;
+            float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
+
+            if(dotProduct < 0f)
+            {
+                float rotationDiff = -Quaternion.Angle(transform.rotation, Reciever.rotation);
+
+                Player.Rotate(Vector3.up, rotationDiff);
+                Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * (portalToPlayer + (Vector3.forward * 0.1f));
+                Player.position = Reciever.position + positionOffset;
+
+                PlayerIsOverlapping = false;
+            }
+        }
+    }
+
 }
