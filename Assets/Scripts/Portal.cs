@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,7 +45,22 @@ public class Portal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        myRenderPlane.gameObject.GetComponent<Renderer>().material.mainTexture = otherPortal.myCamera.targetTexture;
+    }
+
+    void CheckAngle()
+    {
+        if(Mathf.Abs(otherPortal.ReturnMyAngle()) != 180)
+        {
+            float angleDiff = otherPortal.ReturnMyAngle() - ReturnMyAngle();
+            Debug.LogWarning("portale nie są odpowiednio ustawione " + gameObject.name);
+            Debug.Log("Kąt między nimi: " + (angleDiff));
+        }
+    }
+
+    public float ReturnMyAngle()
+    {
+        return myAngle;
     }
 
     // Update is called once per frame

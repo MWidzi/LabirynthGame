@@ -180,6 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 244666673}
+  - component: {fileID: 244666674}
   m_Layer: 0
   m_Name: PortalB
   m_TagString: Untagged
@@ -205,6 +206,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244666674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244666672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bc79d281c2e924e86042440a2b4162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 2129773596}
+  player: {fileID: 403334105}
+  myRenderPlane: {fileID: 1956027440}
+  myColliderPlane: {fileID: 1358600100}
+  otherPortal: {fileID: 1137937498}
+  material: {fileID: 2100000, guid: e0148bf2177be0a4483140349cea2e1e, type: 2}
 --- !u!1 &253504477
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +415,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355289725}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &403334105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3416767620993631080, guid: 54ddc80e8f87b6b49989e5946f906698, type: 3}
+  m_PrefabInstance: {fileID: 3416767619997940891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &431453827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137937497}
+  - component: {fileID: 1137937498}
   m_Layer: 0
   m_Name: PortalA
   m_TagString: Untagged
@@ -1145,6 +1170,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137937498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137937496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bc79d281c2e924e86042440a2b4162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 693625915}
+  player: {fileID: 403334105}
+  myRenderPlane: {fileID: 1388989466}
+  myColliderPlane: {fileID: 1207834319}
+  otherPortal: {fileID: 244666674}
+  material: {fileID: 2100000, guid: c23f5152732b1e644a27a330f914b8fc, type: 2}
 --- !u!1 &1173261233
 GameObject:
   m_ObjectHideFlags: 0
