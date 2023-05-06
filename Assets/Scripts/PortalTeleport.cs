@@ -39,9 +39,10 @@ public class PortalTeleport : MonoBehaviour
             if(dotProduct < 0f)
             {
                 float rotationDiff = -Quaternion.Angle(transform.rotation, Reciever.rotation);
+                rotationDiff += 180f;
 
                 Player.Rotate(Vector3.up, rotationDiff);
-                Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * (portalToPlayer + (Vector3.forward * 0.1f));
+                Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
                 Player.position = Reciever.position + positionOffset;
 
                 PlayerIsOverlapping = false;

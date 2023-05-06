@@ -221,7 +221,7 @@ MonoBehaviour:
   myCamera: {fileID: 2129773596}
   player: {fileID: 403334105}
   myRenderPlane: {fileID: 1956027440}
-  myColliderPlane: {fileID: 1358600100}
+  myCollidPlane: {fileID: 1358600100}
   otherPortal: {fileID: 1137937498}
   material: {fileID: 2100000, guid: e0148bf2177be0a4483140349cea2e1e, type: 2}
 --- !u!1 &253504477
@@ -591,6 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693625914}
   - component: {fileID: 693625915}
+  - component: {fileID: 693625916}
   m_Layer: 0
   m_Name: PortalViewA
   m_TagString: Untagged
@@ -655,6 +656,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &693625916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693625913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3d5a9e822cf2c4db6ccb95d3745762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  portal: {fileID: 0}
+  otherPortal: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1201,7 @@ MonoBehaviour:
   myCamera: {fileID: 693625915}
   player: {fileID: 403334105}
   myRenderPlane: {fileID: 1388989466}
-  myColliderPlane: {fileID: 1207834319}
+  myCollidPlane: {fileID: 1207834319}
   otherPortal: {fileID: 244666674}
   material: {fileID: 2100000, guid: c23f5152732b1e644a27a330f914b8fc, type: 2}
 --- !u!1 &1173261233
@@ -1310,13 +1326,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207834318}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.016283, y: 2.0020313, z: 15.95246}
   m_LocalScale: {x: 0.4, y: 1, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1137937497}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!65 &1207834320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1420,13 +1436,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358600099}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.016283, y: 2.0020313, z: 95.32246}
   m_LocalScale: {x: 0.4, y: 1, z: 0.4}
   m_Children: []
   m_Father: {fileID: 244666673}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!65 &1358600101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1528,13 +1544,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388989465}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.016283, y: 2.0020313, z: 16.12}
   m_LocalScale: {x: 0.4, y: 1, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1137937497}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!23 &1388989467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1704,13 +1720,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956027439}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.016283, y: 2.0020313, z: 95.49}
   m_LocalScale: {x: 0.4, y: 1, z: 0.4}
   m_Children: []
   m_Father: {fileID: 244666673}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!23 &1956027441
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1867,6 +1883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129773595}
   - component: {fileID: 2129773596}
+  - component: {fileID: 2129773597}
   m_Layer: 0
   m_Name: PortalViewB
   m_TagString: Untagged
@@ -1931,6 +1948,21 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2129773597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129773594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3d5a9e822cf2c4db6ccb95d3745762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  portal: {fileID: 0}
+  otherPortal: {fileID: 0}
 --- !u!1001 &1891427684743241465
 PrefabInstance:
   m_ObjectHideFlags: 0
